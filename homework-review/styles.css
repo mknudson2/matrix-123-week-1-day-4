@@ -33,3 +33,96 @@ aside {
   grid-row-start: 1;
   grid-row-end: 8;
 }
+
+.video {
+  position: relative;
+}
+
+.video__preview {
+  background-color: green;
+  width: 10rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.video__preview__name {
+  background-color: yellow;
+  max-width: max-content;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  margin: 0.5rem auto 0;
+}
+
+.video__controls {
+  max-width: 23.25rem;
+  background-color: green;
+  display: inline-flex;
+  gap: 1rem;
+  padding: 0.75rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border-radius: 4.125rem;
+}
+
+.video__controls__button {
+  display: block;
+  width: 4rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.video__controls__button--red {
+  background-color: red;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.chat__gpt {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.chat__gpt__button:last-of-type {
+  flex-grow: 1;
+}
+
+.chat__send {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.chat__send__input {
+  flex-grow: 1;
+}
+
+.chat__box {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.chat__box__message {
+  background-color: white;
+  width: 80%;
+}
+
+.chat__box__message:nth-of-type(4n - 1) {
+  background-color: coral;
+  margin-left: auto;
+}
