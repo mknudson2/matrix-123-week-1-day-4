@@ -115,7 +115,17 @@ aside {
   flex-direction: column-reverse;
   gap: 1rem;
   flex-grow: 1;
+  overflow: scroll;
 }
+
+/* .chat__box {
+  display: grid;
+  grid-auto-rows: 48px;
+  align-content: flex-end;
+  flex-grow: 1;
+  gap: 1rem;
+  overflow: scroll;
+} */
 
 .chat__box__message {
   background-color: white;
