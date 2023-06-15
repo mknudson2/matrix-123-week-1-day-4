@@ -12,7 +12,7 @@
         height: 100vh;
       }
     </style>
-    <svg viewbox="0 0 2000 1000">
+    <!-- <svg viewbox="0 0 2000 1000">
       <defs>
         <linearGradient id="gradient">
           <stop offset="0%" stop-color="#ffeea6" />
@@ -26,6 +26,48 @@
         stroke="url(#gradient)"
         stroke-width="10"></path>
       <circle id="circle" cx="50" cy="50" r="50" />
+    </svg> -->
+
+    <style>
+      circle {
+        animation: rotate-360 5s linear infinite;
+        transform-origin: 50% 50%;
+      }
+      circle:last-of-type {
+        animation: rotate-360 10s linear infinite reverse;
+      }
+
+      @keyframes rotate-360 {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <svg viewbox="0 0 200 200">
+      <defs>
+        <linearGradient id="gradient">
+          <stop offset="0%" stop-color="#ffeea6" />
+          <stop offset="100%" stop-color="#0cc4a0" />
+        </linearGradient>
+      </defs>
+      <circle
+        cx="100"
+        cy="100"
+        r="50"
+        fill="none"
+        stroke="url(#gradient)"
+        stroke-width="5" />
+      <circle
+        cx="100"
+        cy="100"
+        r="70"
+        fill="none"
+        stroke="url(#gradient)"
+        stroke-width="5" />
     </svg>
 
     <script
