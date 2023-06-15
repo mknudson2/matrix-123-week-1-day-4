@@ -130,9 +130,20 @@ aside {
 .chat__box__message {
   background-color: white;
   width: 80%;
+  padding: 0.25rem;
 }
 
 .chat__box__message:nth-of-type(4n - 1) {
   background-color: coral;
   margin-left: auto;
+}
+
+.chat__box__message__time,
+.chat__box__message__name {
+  display: inline-block;
+}
+
+.chat__box__message div {
+  display: flex;
+  justify-content: space-between;
 }
