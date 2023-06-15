@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      svg {
+        width: 100%;
+        height: 100vh;
+      }
+    </style>
+    <svg viewbox="0 0 2000 1000">
+      <defs>
+        <linearGradient id="gradient">
+          <stop offset="0%" stop-color="#ffeea6" />
+          <stop offset="100%" stop-color="#0cc4a0" />
+        </linearGradient>
+      </defs>
+      <path
+        id="path"
+        d="m 44 939 c -130 945 769 -714 1542 1 a 1 1 0 0 0 18 -796 c -1452 991 -813 -412 -1114 -81 z"
+        fill="none"
+        stroke="url(#gradient)"
+        stroke-width="10"></path>
+      <circle id="circle" cx="50" cy="50" r="50" />
+    </svg>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+      integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/MotionPathPlugin.min.js"
+      integrity="sha512-xkBzquq6NgaDVAs0BtAGIfjvxCUdAhmKBpw6NMe+PrTzo50XR/1lQuNNN6tl++7f5GgcEwoTe60ctpg+bzTEwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script>
+      gsap.registerPlugin(MotionPathPlugin);
+
+      gsap.to("#circle", {
+        duration: 10,
+        repeat: -1,
+        ease: "expo.inOut",
+        motionPath: {
+          path: "#path",
+          align: "#path",
+          autoRotate: true,
+          alignOrigin: [0.5, 0.5],
+        },
+      });
+    </script>
+  </body>
+</html>
